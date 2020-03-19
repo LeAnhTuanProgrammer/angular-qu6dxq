@@ -32,9 +32,8 @@
         <p class="card-text">{{product.status ? 'In stock': 'Out stock'}}</p>
       </div>
       <div class="card-footer">
-          <button class="btn btn-primary" (click)="removeItem(product.id)">Delete</button>
-          <button class="btn btn-primary" (click)="showDetail(product)">Click me!</button>
-          <!-- <input type="text" name="" id="" (keyup)="changeName($event)" class="form-control mt-3"> -->
+          <button class="btn btn-primary" (click)="removeItem(product.id)">Xóa</button>
+          <button class="btn btn-primary" (click)="showDetail(product)">Chi tiết!</button>
           <input type="text" name="" id="" [(ngModel)]="product.name" class="form-control mt-3">
       </div>
     </div>
