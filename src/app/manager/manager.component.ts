@@ -1,30 +1,36 @@
 import { Component, OnInit } from '@angular/core';
+import { Data } from '../MockData';
 import { Product } from '../Product';
 import { ProductService } from '../product.service';
+
 @Component({
-  selector: 'app-product-list',
-  templateUrl: './product-list.component.html',
-  styleUrls: ['./product-list.component.css']
+  selector: 'app-manager',
+  templateUrl: './manager.component.html',
+  styleUrls: ['./manager.component.css']
 })
-export class ProductListComponent implements OnInit {
- 
+export class ManagerComponent implements OnInit {
+
+
+  products : Product[];
+  selected : Product;
   constructor(
     private productService: ProductService
-  ) { 
+  ) {
     console.log('constructor')
   }
-   selected: Product;
-  products: Product[];
+
   ngOnInit(): void {
     this.getProducts();
   }
   getProducts(){
     this.products = this.productService.getProducts();
   }
-  removeItem(id){
+ 
+
+  showdetai(product) {
+    this.selected = product;
+  }
+  removeItem(id) {
     this.products = this.products.filter(product => product.id != id);
   }
-   showDetail(product){
-    this.selected = product;
-   }
 }
