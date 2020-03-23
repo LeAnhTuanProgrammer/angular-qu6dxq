@@ -14,11 +14,14 @@ import { HomeComponent } from './home/home.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ManagerComponent } from './manager/manager.component';
+import { NewComponent } from './new/new.component';
+import { NewService } from './new.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, AppRoutingModule ],
-  declarations: [ AppComponent, HelloComponent, ProductListComponent, SlideComponent, CategoryComponent, ProductComponent, ProductAddComponent, HomeComponent, ProductDetailComponent, NotFoundComponent, ManagerComponent ],
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule,   HttpClientModule],
+  declarations: [ AppComponent, HelloComponent, ProductListComponent, SlideComponent, CategoryComponent, ProductComponent, ProductAddComponent, HomeComponent, ProductDetailComponent, NotFoundComponent, ManagerComponent, NewComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [ProductService]
+  providers: [ProductService, NewService]
 })
 export class AppModule { }
