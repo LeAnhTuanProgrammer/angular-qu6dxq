@@ -69,7 +69,7 @@
          <td><img [src]="product.img" width="200px"></td>
        
         <td><button class="btn btn-primary" routerLink="/product/{{product.id}}">Chitiết</button></td>
-        <td><button class="btn btn-primary" >Sửa</button></td>
+        <td><button class="btn btn-primary" routerLink="/product/edit/{{product.id}}" >Sửa</button></td>
          <td><button class="btn btn-primary"  (click)="removeItem(product.id)">Xóa</button></td>
       </tr>
       
