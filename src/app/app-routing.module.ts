@@ -6,14 +6,15 @@ import { HomeComponent } from './home/home.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { ManagerComponent } from './manager/manager.component';
-import { NewComponent } from './new/new.component';
+import { ProductEditComponent } from './product-edit/product-edit.component';
 const routes: Routes = [
   {path:'home', component: HomeComponent},
+  
   {path:'add-product',component:ProductAddComponent},
   {path:'product-list',component:ProductListComponent},
-  {path: 'product/:id', component: ProductDetailComponent},
+  {path: 'product/:productID', component: ProductDetailComponent},
    {path: 'manager', component: ManagerComponent},
-   {path: 'new', component: NewComponent},
+    {path: 'product/edit/:productID', component: ProductEditComponent},
   {path: '**', component: NotFoundComponent},
 
 ];
