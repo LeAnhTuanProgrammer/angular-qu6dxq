@@ -16,10 +16,12 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ManagerComponent } from './manager/manager.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductEditComponent } from './product-edit/product-edit.component';
+import { ProductDeleteComponent } from './product-delete/product-delete.component';
+
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule,   HttpClientModule],
-  declarations: [ AppComponent, HelloComponent, ProductListComponent, SlideComponent, CategoryComponent, ProductComponent, ProductAddComponent, HomeComponent, ProductDetailComponent, NotFoundComponent, ManagerComponent, ProductEditComponent],
+  declarations: [ AppComponent, HelloComponent, ProductListComponent, SlideComponent, CategoryComponent, ProductComponent, ProductAddComponent, HomeComponent, ProductDetailComponent, NotFoundComponent, ManagerComponent, ProductEditComponent, ProductDeleteComponent,],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]
 })
