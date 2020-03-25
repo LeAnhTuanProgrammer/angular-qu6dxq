@@ -25,12 +25,7 @@ export class ProductListComponent implements OnInit {
      this.products = data;
     });
   }
-  removeItem(){
-      this.productService.removeItem(this.product).subscribe(data => {
-        this.router.navigateByUrl("/product-list")
-      });
  
-  }
 
 
 

@@ -19,9 +19,10 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
 import { ProductDeleteComponent } from './product-delete/product-delete.component';
 
 
+
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule,   HttpClientModule],
-  declarations: [ AppComponent, HelloComponent, ProductListComponent, SlideComponent, CategoryComponent, ProductComponent, ProductAddComponent, HomeComponent, ProductDetailComponent, NotFoundComponent, ManagerComponent, ProductEditComponent, ProductDeleteComponent,],
+  declarations: [ AppComponent, HelloComponent, ProductListComponent, SlideComponent, CategoryComponent, ProductComponent, ProductAddComponent, HomeComponent, ProductDetailComponent, NotFoundComponent, ManagerComponent, ProductEditComponent, ProductDeleteComponent, ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]
 })
